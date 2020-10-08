@@ -1,0 +1,53 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="wmd-view-topscroll">
+    <div class="scroll-div1">
+    </div>
+</div>
+<div class="wmd-view">
+    <div class="scroll-div2">
+        content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content 
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+	$(function(){
+    $(".wmd-view-topscroll").scroll(function(){
+        $(".wmd-view")
+            .scrollLeft($(".wmd-view-topscroll").scrollLeft());
+    });
+    $(".wmd-view").scroll(function(){
+        $(".wmd-view-topscroll")
+            .scrollLeft($(".wmd-view").scrollLeft());
+    });
+});
+
+
+</script>
+
+
+<style type="text/css">
+	.wmd-view-topscroll, .wmd-view {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 300px;
+    border: none 0px RED;
+}
+
+.wmd-view-topscroll { height: 20px; }
+.wmd-view { height: 200px; }
+.scroll-div1 { 
+    width: 1000px; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height:20px;
+}
+.scroll-div2 { 
+    width: 1000px; 
+    height:20px;
+}
+
+
+</style>
